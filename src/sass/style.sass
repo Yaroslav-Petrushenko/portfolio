@@ -1,0 +1,415 @@
+*
+    padding: 0
+    margin: 0
+
+=media ($size)
+    @media screen and (min-width: #{$size}px)
+        @content
+
+html
+    font-size: 0.6px
+    +media(576)
+        font-size: 0.7px
+    +media(768)
+        font-size: 0.8px
+    +media(992)
+        font-size: 1px
+
+body
+    background: linear-gradient(90deg, #202020, #100000)
+    margin: 0 auto
+
+body.lock
+    overflow: hidden
+
+.wrapper 
+    margin: 0 auto
+    width: 90%
+    +media(1270)
+        max-width: 1140rem
+.flex
+    display: flex
+    
+ul 
+    align-items: center
+    list-style: none
+    padding-left: 0
+a
+    display: inline-block
+    list-style: none
+    text-decoration: none
+    
+
+.header 
+    background: linear-gradient(90deg, #202020, #100000)
+    background-size: auto 100%
+    height: 100vh
+    background-repeat: no-repeat
+    height: 100vh
+    position: relative
+    // +media(768)
+    //     background-size: 120% auto 
+
+
+
+
+.header-section 
+    position: fixed
+    width: 100%
+    left: 0
+    right: 0
+    transition: all .2s ease
+    z-index: 10
+
+
+.hambMenu 
+    align-items: center
+
+.top 
+    align-items: center
+    justify-content: space-between
+    min-height: 60rem
+
+.logo a 
+    margin: 0
+    font-size: 24rem
+    color: #ffffff
+    font-weight: 700
+    font-family: "Montserrat"
+
+.top-menu 
+    margin: 15rem 0
+    li 
+        margin-right: 0rem
+        list-style: none
+        +media(900)
+            margin-right: 30rem
+    a 
+        font-size: 14rem
+        letter-spacing: 0rem
+        color: #ffffff
+        font-weight: 400
+        font-family: "Montserrat"
+        padding: 15rem 0rem
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 2rem
+            background-color: transparent
+        &:hover::before
+            background-color: #fff
+
+
+.top-menu li:last-child 
+    margin-right: 0
+
+
+.nav-menu 
+    text-align: left
+    display: none  
+    +media(900)
+        display: flex
+        position: relative   
+        flex-direction: row
+        top: 0      
+        background: transparent
+
+.hamburger 
+    height: 50rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    z-index: 8
+    +media(900)
+        display: none
+    span 
+        margin: 4rem 0
+        width: 35rem
+        height: 3rem
+        background-color: #fff
+        border-radius: 5rem
+
+.active-burger 
+    display: inline-block
+    position: absolute
+    a 
+        display: inline-block
+    ul
+        padding-top: 60rem
+        padding-right: 30rem
+        display: flex
+        justify-content: space-between
+        margin: 0
+        position: fixed
+        flex-direction: column
+        align-items: flex-end
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45))
+        background-size: cover
+        overflow: auto
+
+.logo 
+    a 
+        position: relative
+        margin: 0
+        font-size: 18rem
+        color: #fff
+        font-weight: 800
+        font-family: 'Caveat','cursive'
+        transition: all .5s ease
+        &::after 
+            content: ''
+            position: absolute
+            margin: auto
+            bottom: 0
+            left: 0
+            right: 0
+            width: 0%
+            background: #fff
+            transition: all .5s ease
+            height: 1rem
+            &:hover::after 
+                width: 100%
+
+.home-title 
+    padding-left: 150rem
+
+
+.welcome
+    position: absolute
+    left: 40%
+    top: 40%
+    bottom: 50%
+    transform: translate(-50%, -50%)
+    h1 
+        padding-bottom: 10rem
+        color: #ffffff
+        font-weight: 400
+        font-size: 60rem
+        font-family: 'Roboto', sans-serif
+    h2 
+        padding-bottom: 10rem
+        color: #ffffff
+        font-weight: 400
+        font-size: 50rem
+        font-family: 'Roboto', sans-serif
+    p 
+        color: #909096
+        font-weight: 200
+        font-size: 30rem
+        font-family: 'Roboto', sans-serif
+
+
+// about
+
+.about-me-info 
+    background: linear-gradient(90deg, #202020, #240808)	
+    padding: 100rem 0
+
+.about 
+    justify-content: center
+    +media(1024)
+        display: flex
+        justify-content: space-between
+        padding-top: 50rem
+        padding-bottom: 50rem
+        align-items: center
+
+.about-title 
+    // padding-top: rem
+    text-align: center
+    // padding-bottom: 2rem
+    color: #ffffff
+    font-weight: 300
+    font-size: 35rem
+    font-family: 'Roboto', sans-serif
+
+
+.information-about-me 
+    // padding-top: 2rem
+    padding-bottom: 100rem
+    +media(768)
+        width: 100%
+    +media(900)
+        width: 100%
+    +media(1024)
+        width: 60%
+        padding-right: 20rem
+    p 
+        padding-top: 1rem
+        color: #909096
+        font-weight: 200
+        font-size: 18rem
+        font-family: 'Roboto', sans-serif
+    h2 
+        padding-bottom: 2rem
+        color: #909096
+        font-weight: 300
+        font-size: 25rem
+        font-family: 'Roboto', sans-serif
+    
+.my-photo 
+    +media(1024)
+        width: 40%
+        padding-left: 20rem
+        text-align: right
+    img 
+        display: block
+        margin: 0 auto
+        width: 100%
+
+// portfolio
+
+.portfolio 
+    background: linear-gradient(90deg, #202020, #240808)	
+    padding: 100rem 0
+
+.my-works 
+    display: flex
+    justify-content: center
+    h2
+        color: #ffffff
+        font-weight: 300
+        font-size: 35rem
+        font-family: 'Roboto', sans-serif
+
+
+.my-first-projects 
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    padding-top: 100rem
+
+
+.img-projects 
+    img 
+        width: 100%
+        object-fit: "cover"
+        display: block
+
+
+.projects 
+    margin: 10rem 20rem
+    padding-top: 40rem
+    padding-bottom: 40rem
+    width: 350rem
+    border-radius: 10rem
+    background-color: #333333
+
+.description-projects 
+    padding: 5rem
+    text-align: center
+    p
+        width: 90%
+        margin: 0 auto
+        font-size: 16rem
+        color: #909096
+        font-weight: 400
+        font-family: 'Roboto', sans-serif
+        text-align: left
+    h2
+        width: 90%
+        padding-top: 15rem
+        padding-bottom: 10rem
+        margin: 0 auto
+        font-size: 16rem
+        line-height: 28rem
+        color: #EEEEEE
+        font-weight: 600
+        font-family: 'Roboto', sans-serif
+        text-align: left
+    h3
+        width: 90%
+        margin: 0 auto
+        font-size: 16rem
+        line-height: 28rem
+        color: #787A91
+        font-weight: 500
+        font-family: 'Roboto', sans-serif
+        text-align: left
+    a
+        padding-top: 20rem
+        margin: 0 auto
+        font-size: 16rem
+        color: #787A91
+        text-transform: uppercase
+        font-weight: 500
+        font-family: 'Roboto', sans-serif
+        text-align: center
+
+.descr 
+    padding-top: 12rem
+    min-height: 100rem       
+
+// contact
+.contacts 
+    background: linear-gradient(90deg, #202020, #100000)	
+    padding: 100rem 0rem
+    h2
+        color: #ffffff
+        font-weight: 300
+        font-size: 35rem
+        font-family: 'Roboto', sans-serif
+        text-align: center
+    
+.block-contact 
+    width: 50%
+    margin: 0 auto    
+
+
+form 
+    display: flex
+    flex-direction: column
+
+.container-form  
+    margin: 0 auto 
+    width: 60% 
+ 
+.input, 
+.textarea  
+    background-color: transparent 
+    width: 100% 
+    margin-bottom: 50rem 
+    padding: 10.5rem 17rem 
+    font-size: 12rem 
+    line-height: 20rem 
+    outline: 0 
+    color: #000 
+    border: none 
+    border-bottom: 1rem solid #787A91 
+ 
+.textarea  
+    resize: vertical 
+    min-height: 50rem 
+    max-height: 150rem 
+ 
+ 
+.btn-section  
+    display: flex 
+    justify-content: center 
+    width: 50% 
+    margin: 0 auto 
+
+
+.btn-form 
+    align-items: center 
+    display: inline-block 
+    padding: 10rem 30rem 
+    border-radius: 15rem 
+    border: 1rem solid #787A91 
+    background-color: #787A91 
+    text-decoration: none 
+    font-size: 18rem 
+    letter-spacing: 1rem 
+    color: #fff 
+    font-weight: 700 
+    font-family: "Roboto" 
+    text-align: center 
+    cursor: pointer
