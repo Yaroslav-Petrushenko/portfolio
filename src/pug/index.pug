@@ -1,9 +1,9 @@
 doctype html
 html(lang=en)
     head
-        meta(charset=UTF-8)
-        meta(http-equiv=X-UA-Compatible, content=IE=edge)
-        meta(name=viewport, content=width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=3.0 minimum-scale=1.0)
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=3.0 minimum-scale=1.0")
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -17,11 +17,11 @@ html(lang=en)
         <link rel="stylesheet" href="css/styles.css">
     body 
         .overflow-hidden
-            .header
+            .header#home
                 .header-section
                     .top.flex.wrapper
                         .logo
-                            a Y.Petrushenko
+                            a(href="#home") Y.Petrushenko
                         .flex
                             .hamburger
                                 span 
@@ -30,75 +30,76 @@ html(lang=en)
                             nav.nav-menu.flex 
                                 ul.top-menu.flex#menu
                                     li
-                                        a.menu-link(href="") Home
+                                        a.menu-link(href="#home") Home
                                     li
-                                        a.menu-link(href="") About
+                                        a.menu-link(href="#about") About
                                     li
-                                        a.menu-link(href="") Skills
+                                        a.menu-link(href="#skills") Skills
                                     li
-                                        a.menu-link(href="") Projects
+                                        a.menu-link(href="#projects") Projects
                                     li
-                                        a.menu-link(href="") Contact
+                                        a.menu-link(href="#contact") Contact
                 .home-title
                     .welcome
                         h1 Hi!
                         h2 My name is Yaroslav Petrushenko.
                         p I`m Front-end developer
-        .about-me-info#about
-            h2.about-title About me
-            .about.wrapper
-                .information-about-me
-                    h2 Get to know me!
-                    p Hello, my name is Yaroslav Petrushenko. I like to learn new things, recently I discovered the beautiful, limitless world of programming.
-                    p I am looking for an entry level position in a company to be hardworking, learn, grow and develop in the long term.
-                    p I am open to work opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience, then don't hesitate to contact me.
-                    h2.education Education
-                    p - Sumy National Agrarian University. Professional qualification: Bachelor's degree in Civil Engineering.
-                    p - Sumy National Agrarian University. Professional qualification: civil engineer.
-                    p - Hashtag academy, educational program: Front-end developer.
-                .my-photo
-                    img(src="img/my_photo.png" alt="")
-        .skills#skills
-            .my-skills
-                h2 My Skills
-            .slider-skill
-                .sliderSkills#sliderSkills
-                    .slider-card
-
-        .portfolio#projects
-            .my-works
-                h2 My recent works
-            .my-first-projects
-                .projects
-                    .img-projects
-                        img(src="img/Sea.png" alt="")
-                    .description-projects
-                        h2 Sea
-                        h3 Technology
-                        p SassPug, Bootstrap
-                        p.descrOnly responsive layout, various hover effects, bootstrap.
-                        a(href="") View sitea
-                .projects
-                    .img-projects
-                        img(src="img/Startup.png" alt="")
-                    
-                    .description-projects
-                        h2 Startuph2
-                        h3 Technology:
-                        p SassPug, Vanilla JS
-                        p.descrResponsive carousel with many settings, a small online store, various animations, parallax, zoom inside the image, popup.
-                        a href=View sitea
-        .contacts#contact
-            h2 Contacts
-            .container-form
-                form.flex.flex-column(action="" method=post )
-                    label.label(for="userName")
-                        input.input(type="text" for="userName" name="name" placeholder="Your name") 
-                    label.label(for="mailUser" )
-                        input.input(type="mail" for="mailUser" name="email"  placeholder="Your email" )
-                    label.label(for="messageUser")
-                        textarea.textarea(for="messageUser" name="message" placeholder="Your message")
-                    .btn-section 
-                        button.btn-form(type="submit") Submit
+            .about-me-info#about
+                h2.about-title About me
+                .about.wrapper
+                    .information-about-me
+                        h2 Get to know me!
+                        p Hello, my name is Yaroslav Petrushenko. I like to learn new things, recently I discovered the beautiful, limitless world of programming.
+                        p I am looking for an entry level position in a company to be hardworking, learn, grow and develop in the long term.
+                        p I am open to work opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience, then don't hesitate to contact me.
+                        h2.education Education
+                        p - Sumy National Agrarian University. Professional qualification: Bachelor's degree in Civil Engineering.
+                        p - Sumy National Agrarian University. Professional qualification: civil engineer.
+                        p - Hashtag academy, educational program: Front-end developer.
+                    .my-photo
+                        img(src="img/my_photo.png" alt="")
+            .skills#skills
+                .my-skills
+                    h2 My Skills
+                .slider-skill
+                    .sliderSkills#sliderSkills
+                        .slider-card
+            .portfolio#projects
+                .my-works
+                    h2 My recent works
+                .my-first-projects
+                    figure.projects
+                        figcaption
+                            .img-projects
+                                img(src="img/Sea.png" alt="")
+                            .description-projects
+                                h2 Sea
+                                h3 Technology
+                                p SassPug, Bootstrap
+                                p.descr Only responsive layout, various hover effects, bootstrap.
+                                a(href="https://yaroslav-petrushenko.github.io/sea-adventures/") View site
+                    figure.projects
+                        figcaption 
+                            .img-projects
+                                img(src="img/Startup.png" alt="")
+                            .description-projects
+                                h2 Startuph2
+                                h3 Technology:
+                                p SassPug, Vanilla JS
+                                p.descr Responsive carousel with many settings, a small online store, various animations, parallax, zoom inside the image, popup.
+                                a(href="https://yaroslav-petrushenko.github.io/Startup/") View site
+            .contacts#contact
+                h2 Contacts
+                .container-form
+                    form.flex.flex-column(action="" method=post )
+                        label.label(for="userName")
+                            input.input(type="text" for="userName" name="name" placeholder="Your name") 
+                        label.label(for="mailUser" )
+                            input.input(type="mail" for="mailUser" name="email"  placeholder="Your email" )
+                        label.label(for="messageUser")
+                            textarea.textarea(for="messageUser" name="message" placeholder="Your message")
+                        .btn-section 
+                            button.btn-form(type="submit") Submit
+                button.scrolTop#scrolTop Scroll to top
     
-        <script(src="js/scripts.js")>
+        script(src="js/scripts.js")
