@@ -45,9 +45,9 @@ a
     background-repeat: no-repeat
     height: 100vh
     position: relative
-    // +media(768)
-    //     background-size: 120% auto 
-
+    
+.headerHid  
+    transform: translateY(-100%)
 
 .header-section 
     // position: fixed
@@ -56,6 +56,7 @@ a
     right: 0
     transition: all .2s ease
     z-index: 10
+
 .overflow-hidden
     overflow-x: hidden
 
@@ -231,7 +232,7 @@ a
 
 .about 
     justify-content: center
-    +media(1024)
+    +media(700)
         display: flex
         justify-content: space-between
         padding-top: 50rem
@@ -241,7 +242,7 @@ a
 .about-title 
     // padding-top: rem
     text-align: center
-    // padding-bottom: 2rem
+    padding-bottom: 40rem
     color: #ffffff
     font-weight: 300
     font-size: 35rem
@@ -249,7 +250,6 @@ a
 
 
 .information-about-me 
-    // padding-top: 2rem
     padding-bottom: 100rem
     +media(768)
         width: 100%
@@ -259,18 +259,21 @@ a
         width: 60%
         padding-right: 20rem
     p 
-        padding-top: 1rem
+        padding-bottom: 10rem
         color: #909096
         font-weight: 200
         font-size: 18rem
         font-family: 'Roboto', sans-serif
     h2 
-        padding-bottom: 2rem
+        padding-bottom: 30rem
         color: #909096
         font-weight: 300
         font-size: 25rem
         font-family: 'Roboto', sans-serif
-    
+
+.education
+    padding-top: 20rem
+
 .my-photo 
     +media(1024)
         width: 40%
@@ -318,11 +321,14 @@ a
     width: 350rem
     border-radius: 10rem
     background-color: #333333
+    margin-bottom: 30rem
     cursor: pointer
     transition: all .5s ease
     &:hover
         filter: drop-shadow(0 0 20px rgba(204, 204, 223, 0.18))
         transform: scale(1.05)
+    +media(630)
+        margin-bottom: 10rem
 
 .description-projects 
     padding: 5rem
@@ -399,9 +405,9 @@ form
     background-color: transparent 
     width: 100% 
     margin-bottom: 50rem 
-    padding: 10.5rem 17rem 
     font-size: 15rem 
-    // line-height: 20rem 
+    line-height: 20rem 
+    padding-bottom: 5rem
     outline: 0 
     color: #fff
     border: none 
@@ -410,7 +416,6 @@ form
  
 .textarea  
     resize: vertical 
-    min-height: 50rem 
     max-height: 150rem 
  
  
@@ -441,33 +446,45 @@ form
         filter: drop-shadow(0 0 4px rgba(204, 204, 223, 0.18))
         transform: scale(1.05)
 
+// social link
+
+.social-links
+    display: flex
+    justify-content: center
+    padding: 40rem 0
+    svg
+        width: 35rem
+        height: 35rem
+    a
+        padding: 8rem
+
+// copyright
+    
+.copyright
+    p
+        padding-bottom: 50rem
+        color: #909096
+        font-weight: 300
+        font-size: 15rem
+        font-family: 'Roboto', sans-serif
+        text-align: center
+
+
+// btn up
 .scrolTop
     position: fixed
+    bottom: -50px
+    right: 20px
+    opacity: 0
     background-color: transparent
-    color: transparent
+    color: #fff
     width: 50rem
     height: 50rem
     border-radius: 50%
     border: 2px solid #fff
-    bottom: -50px
-    right: 20px
     transition: transform .5s ease
     animation: arrowUp 1s linear infinite alternate
-    opacity: 0
-    transition: all 0.3s ease-in-out
-    &::before
-        content: ""
-        position: absolute
-        border-top: 12px solid #fff
-        border-right: 12px solid transparent
-        border-bottom: 12px solid transparent
-        border-left: 12px solid #fff
-        top: 35%
-        left: 24%
-        transform: translate(-50%,-50%)
-        transform: rotate(45deg)
-        box-sizing: border-box
-        cursor: pointer
+
 
 .scrolTop.show 
     bottom: 20px

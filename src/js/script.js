@@ -47,7 +47,7 @@ links.forEach(link => {
 window.addEventListener('scroll', function () {
     let btnTop = document.getElementById('scrolTop');
 
-    if (window.pageYOffset > 500) {
+    if (window.pageYOffset > 400) {
         btnTop.classList.add('show');
     } else {
         btnTop.classList.remove('show');
